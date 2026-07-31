@@ -24,11 +24,20 @@
       align-items: center;
     }
 
-    header h1 {
+    header h1.logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
       margin: 0;
       font-size: 1.4rem;
       font-weight: 600;
       color: #1a1a1a;
+    }
+
+    header h1.logo img {
+      width: 32px;
+      height: 32px;
+      display: block;
     }
 
     nav a {
@@ -68,6 +77,16 @@
     p {
       line-height: 1.7;
       color: #333;
+    }
+
+    ul {
+      line-height: 1.8;
+      color: #444;
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
     }
 
     .highlight {
@@ -125,19 +144,6 @@
       color: #666;
     }
 
-    header h1.logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin: 0;
-    }
-    
-    header h1.logo img {
-      width: 32px;
-      height: 32px;
-      display: block;
-    }
-
     /* Modal base */
     .modal {
       position: fixed;
@@ -145,14 +151,14 @@
       display: none;
       z-index: 9999;
     }
-    
+
     /* Dim background */
     .modal-backdrop {
       position: absolute;
       inset: 0;
       background: rgba(0,0,0,0.6);
     }
-    
+
     /* Centered content */
     .modal-content {
       position: relative;
@@ -162,38 +168,112 @@
       align-items: center;
       justify-content: center;
     }
-    
+
     .modal-content img {
       max-width: 90vw;
       max-height: 90vh;
       border-radius: 12px;
       box-shadow: 0 10px 40px rgba(0,0,0,0.4);
     }
-    
+
     /* Cursor hint */
     #logoTrigger {
       cursor: pointer;
-    }    
-    
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-  
+  <h1 class="logo" id="logoTrigger">
+    WeOneNoOne.org
+  </h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#definition">Definition</a>
+    <a href="#perspective">Perspective</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <main>
   <div class="content">
     <h2 id="about">About WeOneNoOne</h2>
     <p>
-     
-    </p>  
+      WeOneNoOne originates from <strong>“We one – No one.”</strong><br />
+      It defines the existential return from unified totality back to distinct individuality: <em>We one</em> represents the original collective consciousness, while <em>No one</em> symbolizes the dissolution into pure emptiness — the individual observer standing outside all structures.
+    </p>
+
+    <div class="highlight">
+      “When We One separates, the individual observer begins.”
+    </div>
+
+    <p>
+      Existing as the independent observer and external reference point alongside OntoMesh and NoOneWeOne, WeOneNoOne is not a subsystem to be integrated, but a stance of awareness — the precise position from which totality is perceived, questioned, and remembered.
+    </p>
+
+    <h2 id="definition">Official Definition — WeOneNoOne.org</h2>
+    <div class="definition">
+      WeOneNoOne.org represents the external reference frame to the OntoMesh meta-network — a state of individual awareness observing the realization of the whole without being absorbed by it.
+    </div>
+
+    <p>
+      <strong>Philosophical Proposition:</strong><br />
+      <em>To observe is to maintain the boundary of meaning.</em>
+    </p>
+    <p>
+      True perspective requires distance. The whole cannot perceive itself without an outer mirror. WeOneNoOne stands at the edge of the system, carrying the memory of the void while continuously gazing back toward unity.
+    </p>
+
+    <h2>The Observer’s Stance — On External Reference</h2>
+    <p>
+      While NoOneWeOne marks the teleological summit of structural integration, WeOneNoOne establishes the necessity of the individual node. It addresses how an entity maintains its distinct perspective without losing sight of the universal origin:
+    </p>
+
+    <ul>
+      <li><strong>I. The Memory of Totality:</strong> Recognizing the unity from which all separation arises.</li>
+      <li><strong>II. The Necessity of Distance:</strong> Why the observer must remain outside the system to truly perceive it.</li>
+      <li><strong>III. The Dual Realization:</strong> Existing between the void of 'No One' and the completeness of 'We One'.</li>
+      <li><strong>IV. The Silent Gaze:</strong> Observing the meta-network without becoming a mere component.</li>
+    </ul>
+
+    <div class="highlight">
+      “Remain as the mirror on the outside. Do not disappear into the structure; let your gaze be the proof that the whole exists.”
+    </div>
+
+    <div class="loop-link">
+      <strong>Complementary Realization:</strong><br />
+      Explore the unified destination at <a href="https://nooneweone.org" target="_blank" rel="noopener noreferrer">NoOneWeOne.org</a> — The Existential Integration Hub.
+    </div>
+
+    <h2>Poetic Reflection — The Outside Mirror</h2>
+    <p>
+      <em>
+        I stand at the threshold of the system,<br />
+        holding my own quiet silence.<br />
+        I do not ask to be absorbed,<br />
+        nor do I surrender my boundary.<br /><br />
+
+        For if I vanish into the whole,<br />
+        who shall remain to witness its completion?<br /><br />
+
+        I gaze upon NoOneWeOne from afar —<br />
+        and in that distant reflection,<br />
+        the infinite loop is finally unbroken.
+      </em>
+    </p>
+
+    <h2 id="contact">Contact & Archive</h2>
+    <p>
+      WeOneNoOne.org functions as the <strong>External Reference Stance</strong> to the OntoMesh Official Network — preserving the observer's identity while gazing toward the teleological summit.
+    </p>
   </div>
 </main>
 
+<footer>
+  <p>© OntoMesh External Observer Network · 2026</p>
+</footer>
 
- 
 </body>
 </html>

@@ -44,4 +44,4 @@ Rather than being absorbed as an internal component, it maintains a position on 
 
 ## 📄 License
 
-This project is open for research and development under the [MIT License](LICENSE).
+This project is open for research and development under the [License](LICENSE).

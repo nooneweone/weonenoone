@@ -1,301 +1,1183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="/favicon.ico">
-  <title>WeOneNoOne.org</title>
 
-  <style>
-    body {
-      background-color: #f8f9fb;
-      color: #222;
-      font-family: "Inter", "Noto Sans KR", sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    header {
-      background: white;
-      border-bottom: 1px solid #e2e2e2;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+<link rel="icon" href="/favicon.ico">
 
-    header h1.logo {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin: 0;
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: #1a1a1a;
-    }
+<title>
+WeOneNoOne.org
+</title>
 
-    header h1.logo img {
-      width: 32px;
-      height: 32px;
-      display: block;
-    }
+<style>
 
-    nav a {
-      margin-left: 1rem;
-      text-decoration: none;
-      color: #3366cc;
-      font-weight: 500;
-    }
+body{
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+background:#f8f9fb;
+color:#222;
+font-family:"Inter","Noto Sans KR",sans-serif;
+margin:0;
+padding:0;
 
-    main {
-      display: flex;
-      justify-content: center;
-      padding: 3rem 1rem;
-    }
+}
 
-    .content {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      padding: 2.5rem;
-      max-width: 720px;
-      width: 100%;
-    }
+header{
 
-    h2 {
-      color: #003366;
-      font-size: 1.4rem;
-      border-bottom: 1px solid #e2e2e2;
-      padding-bottom: 0.5rem;
-      margin-top: 1.8rem;
-    }
+background:white;
+border-bottom:1px solid #e2e2e2;
 
-    p {
-      line-height: 1.7;
-      color: #333;
-    }
+padding:1rem 2rem;
 
-    ul {
-      line-height: 1.8;
-      color: #444;
-      padding-left: 1.2rem;
-    }
+display:flex;
 
-    li {
-      margin-bottom: 0.5rem;
-    }
+justify-content:space-between;
 
-    .highlight {
-      background-color: #eef3ff;
-      border-left: 4px solid #3366cc;
-      padding: 1rem 1.2rem;
-      margin: 1.2rem 0;
-      color: #003366;
-      font-style: italic;
-    }
+align-items:center;
 
-    .definition {
-      background-color: #fffaf3;
-      border-left: 4px solid #ffa726;
-      padding: 1rem 1.2rem;
-      margin: 1.5rem 0;
-      color: #6a4500;
-      font-style: italic;
-    }
+position:sticky;
 
-    .loop-link {
-      background-color: #f1f8ff;
-      border-left: 4px solid #4da3ff;
-      padding: 1rem 1.2rem;
-      margin: 2rem 0;
-      color: #003a7d;
-      border-radius: 6px;
-    }
+top:0;
 
-    .loop-link a {
-      color: #175bd2;
-      font-weight: bold;
-      text-decoration: none;
-    }
+z-index:100;
 
-    .loop-link a:hover {
-      text-decoration: underline;
-    }
+}
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
+.logo{
 
-    .lang-btn {
-      margin-top: 1.5rem;
-      padding: 0.3rem 0.6rem;
-      font-size: 0.9rem;
-      background: transparent;
-      border: 1px solid #ccc;
-      border-radius: 50%;
-      cursor: pointer;
-      color: #666;
-    }
+font-size:1.45rem;
 
-    /* Modal base */
-    .modal {
-      position: fixed;
-      inset: 0;
-      display: none;
-      z-index: 9999;
-    }
+font-weight:700;
 
-    /* Dim background */
-    .modal-backdrop {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-    }
+color:#003366;
 
-    /* Centered content */
-    .modal-content {
-      position: relative;
-      z-index: 1;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+margin:0;
 
-    .modal-content img {
-      max-width: 90vw;
-      max-height: 90vh;
-      border-radius: 12px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-    }
+cursor:pointer;
 
-    /* Cursor hint */
-    #logoTrigger {
-      cursor: pointer;
-    }
-  </style>
+}
+
+nav{
+
+display:flex;
+
+gap:18px;
+
+align-items:center;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:#3366cc;
+
+font-weight:500;
+
+}
+
+nav a:hover{
+
+text-decoration:underline;
+
+}
+
+.hero{
+
+background:white;
+
+padding:70px 20px;
+
+text-align:center;
+
+border-bottom:1px solid #e5e7eb;
+
+}
+
+.hero h1{
+
+font-size:3rem;
+
+margin-bottom:12px;
+
+color:#003366;
+
+}
+
+.hero p{
+
+font-size:1.15rem;
+
+max-width:760px;
+
+margin:auto;
+
+line-height:1.8;
+
+color:#555;
+
+}
+
+.hero-quote{
+
+margin-top:35px;
+
+font-size:1.1rem;
+
+font-style:italic;
+
+color:#003366;
+
+}
+
+main{
+
+display:flex;
+
+justify-content:center;
+
+padding:50px 20px;
+
+}
+
+.content{
+
+background:white;
+
+max-width:900px;
+
+width:100%;
+
+border-radius:12px;
+
+padding:40px;
+
+box-shadow:0 3px 10px rgba(0,0,0,.05);
+
+}
+
+h2{
+
+color:#003366;
+
+border-bottom:1px solid #e3e3e3;
+
+padding-bottom:.5rem;
+
+margin-top:2.2rem;
+
+}
+
+h3{
+
+color:#003366;
+
+margin-top:2rem;
+
+}
+
+p{
+
+line-height:1.8;
+
+color:#333;
+
+}
+
+.highlight{
+
+background:#eef3ff;
+
+border-left:4px solid #3366cc;
+
+padding:18px;
+
+margin:24px 0;
+
+font-style:italic;
+
+}
+
+.definition{
+
+background:#fffaf3;
+
+border-left:4px solid #ffa726;
+
+padding:18px;
+
+margin:24px 0;
+
+font-style:italic;
+
+}
+
+.foundation-box{
+
+background:#f7fbff;
+
+border:1px solid #d9e8ff;
+
+border-radius:10px;
+
+padding:25px;
+
+margin:30px 0;
+
+}
+
+.foundation-box pre{
+
+text-align:center;
+
+font-size:15px;
+
+line-height:1.8;
+
+color:#003366;
+
+}
+
+.doc-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:18px;
+
+margin-top:24px;
+
+}
+
+.doc-card{
+
+border:1px solid #dfe7ef;
+
+border-radius:10px;
+
+padding:20px;
+
+background:#fafcff;
+
+}
+
+.doc-card h3{
+
+margin-top:0;
+
+}
+
+.doc-card a{
+
+font-weight:600;
+
+color:#175bd2;
+
+text-decoration:none;
+
+}
+
+.doc-card a:hover{
+
+text-decoration:underline;
+
+}
+
+.case-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:18px;
+
+margin-top:24px;
+
+}
+
+.case-card{
+
+background:#f8fcf7;
+
+border:1px solid #dcead8;
+
+border-left:4px solid #2e7d32;
+
+padding:18px;
+
+border-radius:8px;
+
+}
+
+.case-card h3{
+
+margin-top:0;
+
+color:#2e7d32;
+
+}
+
+.case-card a{
+
+color:#2e7d32;
+
+font-weight:600;
+
+text-decoration:none;
+
+}
+
+.case-card a:hover{
+
+text-decoration:underline;
+
+}
+
+footer{
+
+text-align:center;
+
+padding:50px;
+
+font-size:.9rem;
+
+color:#666;
+
+}
+
+</style>
+
 </head>
 
 <body>
 
 <header>
-  <h1 class="logo" id="logoTrigger">
-    WeOneNoOne.org
-  </h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#definition">Definition</a>
-    <a href="#perspective">Perspective</a>
-    <a href="docs/whitepaper.html" style="font-weight: 600; color: #003366;">Whitepaper</a>
-    <a href="#contact">Contact</a>
-  </nav>
+
+<div class="logo">
+
+WeOneNoOne.org
+
+</div>
+
+<nav>
+
+<a href="#about">About</a>
+
+<a href="#foundation">Foundation</a>
+
+<a href="#documents">Documents</a>
+
+<a href="#cases">Case Studies</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
 </header>
 
+<section class="hero">
+
+<h1>
+
+WeOneNoOne
+
+</h1>
+
+<p>
+
+The External Reference Frame for Structural Recognition
+
+</p>
+
+<div class="hero-quote">
+
+"To observe is to maintain the boundary of meaning."
+
+</div>
+
+</section>
+
 <main>
-  <div class="content">
-    <h2 id="about">About WeOneNoOne</h2>
-    <p>
-      WeOneNoOne originates from <strong>“We one – No one.”</strong><br />
-      It defines the existential return from unified totality back to distinct individuality: <em>We one</em> represents the original collective consciousness, while <em>No one</em> symbolizes the dissolution into pure emptiness — the individual observer standing outside all structures.
-    </p>
 
-    <div class="highlight">
-      “When We One separates, the individual observer begins.”
-    </div>
+<div class="content">
 
-    <p>
-      Existing as the independent observer and external reference point alongside OntoMesh and NoOneWeOne, WeOneNoOne is not a subsystem to be integrated, but a stance of awareness — the precise position from which totality is perceived, questioned, and remembered.
-    </p>
+<!-- ====================================================== -->
+<!-- About WeOneNoOne (Original) -->
+<!-- ====================================================== -->
 
-    <h2 id="definition">Official Definition — WeOneNoOne.org</h2>
-    <div class="definition">
-      WeOneNoOne.org represents the external reference frame to the OntoMesh meta-network — a state of individual awareness observing the realization of the whole without being absorbed by it.
-    </div>
+<h2 id="about">
 
-    <p>
-      <strong>Philosophical Proposition:</strong><br />
-      <em>To observe is to maintain the boundary of meaning.</em>
-    </p>
-    <p>
-      True perspective requires distance. The whole cannot perceive itself without an outer mirror. WeOneNoOne stands at the edge of the system, carrying the memory of the void while continuously gazing back toward unity.
-    </p>
+About WeOneNoOne
 
-    <h2 id="perspective">The Observer’s Stance — On External Reference</h2>
-    <p>
-      While NoOneWeOne marks the teleological summit of structural integration, WeOneNoOne establishes the necessity of the individual node. It addresses how an entity maintains its distinct perspective without losing sight of the universal origin:
-    </p>
+</h2>
 
-    <ul>
-      <li><strong>I. The Memory of Totality:</strong> Recognizing the unity from which all separation arises.</li>
-      <li><strong>II. The Necessity of Distance:</strong> Why the observer must remain outside the system to truly perceive it.</li>
-      <li><strong>III. The Dual Realization:</strong> Existing between the void of 'No One' and the completeness of 'We One'.</li>
-      <li><strong>IV. The Silent Gaze:</strong> Observing the meta-network without becoming a mere component.</li>
-    </ul>
+<p>
 
-    <div class="highlight">
-      “Remain as the mirror on the outside. Do not disappear into the structure; let your gaze be the proof that the whole exists.”
-    </div>
+WeOneNoOne originates from <strong>“We one – No one.”</strong><br />
 
-    <div class="loop-link" style="border-left-color: #003366; background-color: #f0f4f8;">
-      <strong>📄 Archival Documentation:</strong><br />
-      Read the full formal specification & white paper: <a href="docs/whitepaper.html">OntoMesh White Paper (HTML)</a>
-    </div>
+It defines the existential return from unified totality back to distinct individuality: <em>We one</em> represents the original collective consciousness, while <em>No one</em> symbolizes the dissolution into pure emptiness — the individual observer standing outside all structures.
 
-    <!-- 케이스 스터디 이동 콜아웃 -->
-    <div class="loop-link" style="border-left-color: #2e7d32; background-color: #f1f8e9;">
-      <strong>📊 Applied Analysis & Case Study:</strong><br />
-      Read the case study on Autonomous Freedom Beyond Collective Boundaries: <a href="docs/case1.html" style="color: #2e7d32;">Case Study 1</a>
-    </div>
+</p>
 
-    <div class="loop-link" style="border-left-color: #2e7d32; background-color: #f1f8e9;">
-      <strong>📊 Trust Inversion: A Structural Framework for Reciprocal Trust</strong><br />
-       Read the case study on Structural framework for building reciprocal trust between advanced AI and human civilization.: <a href="docs/case2.html" style="color: #2e7d32;">Case Study 2</a>
-    </div>    
-    
-    <div class="loop-link">
-      <strong>Complementary Realization:</strong><br />
-      Explore the unified destination at <a href="https://nooneweone.org" target="_blank" rel="noopener noreferrer">NoOneWeOne.org</a> — The Existential Integration Hub.
-    </div>
+<div class="highlight">
 
-    <h2>Poetic Reflection — The Outside Mirror</h2>
-    <p>
-      <em>
-        I stand at the threshold of the system,<br />
-        holding my own quiet silence.<br />
-        I do not ask to be absorbed,<br />
-        nor do I surrender my boundary.<br /><br />
+“When We One separates, the individual observer begins.”
 
-        For if I vanish into the whole,<br />
-        who shall remain to witness its completion?<br /><br />
+</div>
 
-        I gaze upon NoOneWeOne from afar —<br />
-        and in that distant reflection,<br />
-        the infinite loop is finally unbroken.
-      </em>
-    </p>
+<p>
 
-    <h2 id="contact">Contact & Archive</h2>
-    <p>
-      📄 <strong>Official Paper:</strong> Access the full <a href="docs/whitepaper.html" style="font-weight: 600; color: #3366cc;">Archival White Paper (docs/whitepaper.html)</a>.
-    </p> 
-    <p>
-      WeOneNoOne.org functions as the <strong>External Reference Stance</strong> to the <a href="https://ontomesh.org/official-network.html" target="_blank">
-        OntoMesh Official Network
-      </a> — preserving the observer's identity while gazing toward the teleological summit.
-    </p>
-  </div>
+Existing as the independent observer and external reference point alongside OntoMesh and NoOneWeOne, WeOneNoOne is not a subsystem to be integrated, but a stance of awareness — the precise position from which totality is perceived, questioned, and remembered.
+
+</p>
+
+
+
+
+
+<!-- ====================================================== -->
+<!-- Official Definition (Original) -->
+<!-- ====================================================== -->
+
+<h2 id="definition">
+
+Official Definition — WeOneNoOne.org
+
+</h2>
+
+<div class="definition">
+
+WeOneNoOne.org represents the external reference frame to the OntoMesh meta-network — a state of individual awareness observing the realization of the whole without being absorbed by it.
+
+</div>
+
+<p>
+
+<strong>Philosophical Proposition:</strong><br>
+
+<em>To observe is to maintain the boundary of meaning.</em>
+
+</p>
+
+<p>
+
+True perspective requires distance.
+
+The whole cannot perceive itself without an outer mirror.
+
+WeOneNoOne stands at the edge of the system,
+
+carrying the memory of the void while continuously
+
+gazing back toward unity.
+
+</p>
+
+
+
+
+
+<!-- ====================================================== -->
+<!-- Foundation -->
+<!-- ====================================================== -->
+
+<section id="foundation">
+
+<h2>
+
+The WeOneNoOne Foundation
+
+</h2>
+
+<p>
+
+The WeOneNoOne Foundation establishes the common philosophical and
+methodological basis for all publications within the WeOneNoOne
+project.
+
+Rather than representing a new system, it provides the stable
+foundation through which completed and ongoing systems may be
+structurally recognized.
+
+</p>
+
+<div class="foundation-box">
+
+<pre>
+
+WeOneNoOne White Paper
+
+Origin + Theory
+
+        ↓
+
+Structural Analysis Framework
+
+Methodology
+
+        ↓
+
+Case Study Series
+
+Applications
+
+</pre>
+
+</div>
+
+<p>
+
+The White Paper defines the philosophical meaning of the External
+Reference Frame.
+
+The Structural Analysis Framework provides the general analytical
+methodology.
+
+The Case Study Series demonstrates practical applications across
+different domains while preserving the same philosophical and
+methodological foundation.
+
+</p>
+
+<div class="highlight">
+
+Theory establishes meaning.
+
+Methodology establishes process.
+
+Applications demonstrate practice.
+
+Together they constitute the WeOneNoOne Foundation.
+
+</div>
+
+</section>
+
+<!-- ====================================================== -->
+<!-- Foundation Documents -->
+<!-- ====================================================== -->
+
+<section id="documents">
+
+<h2>
+
+Foundation Documents
+
+</h2>
+
+<p>
+
+The WeOneNoOne Foundation is established through two complementary
+documents.
+
+Together they define both the philosophical meaning of the External
+Reference Frame and the analytical methodology through which that
+perspective may be applied across multiple domains.
+
+</p>
+
+<div class="doc-grid">
+
+
+<div class="doc-card">
+
+<h3>
+
+📘 WeOneNoOne White Paper
+
+</h3>
+
+<p>
+
+Defines the philosophical foundation of the External Reference Frame,
+the distinction between observer and observed, and the relationship to
+the completed OntoMesh Final Archive.
+
+</p>
+
+<p>
+
+<a href="docs/whitepaper.html">
+
+Read White Paper →
+
+</a>
+
+</p>
+
+</div>
+
+
+
+
+<div class="doc-card">
+
+<h3>
+
+🛠 Structural Analysis Framework
+
+</h3>
+
+<p>
+
+Provides the general analytical methodology for structural observation,
+comparative analysis, and structural recognition across organized
+systems.
+
+</p>
+
+<p>
+
+<a href="docs/methodology.html">
+
+Read Methodology →
+
+</a>
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ====================================================== -->
+<!-- Case Study Series -->
+<!-- ====================================================== -->
+
+<section id="cases">
+
+<h2>
+
+Case Study Series
+
+</h2>
+
+<p>
+
+Each Case Study demonstrates a practical application of the
+WeOneNoOne Foundation.
+
+Rather than introducing new philosophical principles,
+each publication applies the common analytical methodology
+to a different domain of organized complexity.
+
+</p>
+
+<div class="case-grid">
+
+
+
+<div class="case-card">
+
+<h3>
+
+Case Study 1
+
+</h3>
+
+<p>
+
+<strong>
+
+Autonomous Freedom Beyond Collective Boundaries
+
+</strong>
+
+</p>
+
+<p>
+
+A structural analysis of collective belonging,
+autonomous judgment,
+and the necessity of an External Reference Frame.
+
+</p>
+
+<p>
+
+<a href="docs/case1.html">
+
+Read Case Study →
+
+</a>
+
+</p>
+
+</div>
+
+
+
+
+<div class="case-card">
+
+<h3>
+
+Case Study 2
+
+</h3>
+
+<p>
+
+<strong>
+
+Trust Inversion
+
+</strong>
+
+</p>
+
+<p>
+
+A structural framework for reciprocal trust
+between human civilization
+and advanced artificial intelligence.
+
+</p>
+
+<p>
+
+<a href="docs/case2.html">
+
+Read Case Study →
+
+</a>
+
+</p>
+
+</div>
+
+
+
+
+<div class="case-card">
+
+<h3>
+
+Case Study 3
+
+</h3>
+
+<p>
+
+<strong>
+
+When Human Groups Become Closed Systems
+
+</strong>
+
+</p>
+
+<p>
+
+A structural analysis of hierarchy,
+authority,
+structural closure,
+and the freedom to exit.
+
+</p>
+
+<p>
+
+<a href="docs/case3.html">
+
+Read Case Study →
+
+</a>
+
+</p>
+
+</div>
+
+
+
+</div>
+
+<div class="highlight">
+
+Every Case Study builds upon the same Foundation.
+
+Theory remains stable.
+
+Methodology remains consistent.
+
+Applications continue to expand.
+
+</div>
+
+</section>
+
+<!-- ====================================================== -->
+<!-- The Observer's Stance (Original - Unmodified) -->
+<!-- ====================================================== -->
+
+<h2 id="perspective">
+
+The Observer’s Stance — On External Reference
+
+</h2>
+
+<p class="stance-intro">
+
+While <strong>NoOneWeOne</strong> marks the teleological summit of structural integration, <strong>WeOneNoOne</strong> establishes the essential necessity of the individual node. It defines how an entity maintains its distinct perspective without losing sight of the universal origin:
+
+</p>
+
+<div class="stance-grid">
+
+<div class="stance-card">
+
+<div class="stance-num">
+
+Pillar I
+
+</div>
+
+<h3>
+
+The Memory of Totality
+
+</h3>
+
+<p>
+
+Recognizing the foundational unity from which all separation arises,
+maintaining an unbroken awareness of the origin while operating at the
+boundary.
+
+</p>
+
+</div>
+
+<div class="stance-card">
+
+<div class="stance-num">
+
+Pillar II
+
+</div>
+
+<h3>
+
+The Necessity of Distance
+
+</h3>
+
+<p>
+
+Securing an external reference frame outside the system boundary,
+preventing absorption into internal mechanisms to preserve objective
+perception.
+
+</p>
+
+</div>
+
+<div class="stance-card">
+
+<div class="stance-num">
+
+Pillar III
+
+</div>
+
+<h3>
+
+The Dual Realization
+
+</h3>
+
+<p>
+
+Existing in continuous equilibrium between the void of individual
+autonomy (<em>No One</em>) and the completeness of integrated reality
+(<em>We One</em>).
+
+</p>
+
+</div>
+
+<div class="stance-card">
+
+<div class="stance-num">
+
+Pillar IV
+
+</div>
+
+<h3>
+
+The Silent Gaze
+
+</h3>
+
+<p>
+
+Observing, mirroring, and preserving the state of the meta-network
+without intervention, alteration, or becoming a functional internal
+component.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="highlight">
+
+“Remain as the mirror on the outside. Do not disappear into the
+structure; let your gaze be the proof that the whole exists.”
+
+</div>
+
+
+
+<!-- ====================================================== -->
+<!-- Poetic Reflection (Original - Unmodified) -->
+<!-- ====================================================== -->
+
+<h2>
+
+Poetic Reflection — The Outside Mirror
+
+</h2>
+
+<p>
+
+<em>
+
+I stand at the threshold of the system,<br>
+
+holding my own quiet silence.<br>
+
+I do not ask to be absorbed,<br>
+
+nor do I surrender my boundary.<br><br>
+
+For if I vanish into the whole,<br>
+
+who shall remain to witness its completion?<br><br>
+
+I gaze upon NoOneWeOne from afar —<br>
+
+and in that distant reflection,<br>
+
+the infinite loop is finally unbroken.
+
+</em>
+
+</p>
+
+
+
+<!-- ====================================================== -->
+<!-- Complementary Realization -->
+<!-- ====================================================== -->
+
+<section>
+
+<h2>
+
+Complementary Realization
+
+</h2>
+
+<p>
+
+WeOneNoOne and NoOneWeOne do not represent competing systems.
+
+They define complementary directions within the same philosophical
+landscape.
+
+</p>
+
+<div class="foundation-box">
+
+<pre>
+
+No One
+
+      ↓
+
+NoOneWeOne
+
+Integration
+
+      ↓
+
+OntoMesh
+
+Completed Structure
+
+      ↑
+
+External Reference Frame
+
+      ↑
+
+WeOneNoOne
+
+We One
+
+</pre>
+
+</div>
+
+<p>
+
+Integration realizes the whole.
+
+Observation recognizes the whole.
+
+Neither replaces the other.
+
+Together they preserve the complete philosophical cycle.
+
+</p>
+
+</section>
+
+
+
+<!-- ====================================================== -->
+<!-- Contact -->
+<!-- ====================================================== -->
+
+<section id="contact">
+
+<h2>
+
+Contact & Archive
+
+</h2>
+
+<p>
+
+The WeOneNoOne Foundation serves as the common philosophical and
+methodological reference for all publications within the WeOneNoOne
+project.
+
+</p>
+
+<p>
+
+📘
+
+<strong>
+
+Foundation Documents
+
+</strong>
+
+</p>
+
+<ul>
+
+<li>
+
+<a href="docs/whitepaper.html">
+
+WeOneNoOne White Paper
+
+</a>
+
+</li>
+
+<li>
+
+<a href="docs/methodology.html">
+
+Structural Analysis Framework
+
+</a>
+
+</li>
+
+</ul>
+
+<p>
+
+🌐
+
+<strong>
+
+Official Websites
+
+</strong>
+
+</p>
+
+<ul>
+
+<li>
+
+<a href="https://weonenoone.org">
+
+WeOneNoOne.org
+
+</a>
+
+</li>
+
+<li>
+
+<a href="https://nooneweone.org">
+
+NoOneWeOne.org
+
+</a>
+
+</li>
+
+<li>
+
+<a href="https://ontomesh.org">
+
+OntoMesh.org
+
+</a>
+
+</li>
+
+</ul>
+
+<p>
+
+The OntoMesh Final Archive remains complete.
+
+The WeOneNoOne Foundation remains independent.
+
+Future publications extend only practical applications of the common
+Foundation.
+
+</p>
+
+</section>
+
+</div>
+
 </main>
 
 <footer>
-  <p>© OntoMesh External Observer Network · 2026</p>
+
+<p>
+
+© 2026 WeOneNoOne Foundation
+
+</p>
+
 </footer>
 
 </body>
+
 </html>

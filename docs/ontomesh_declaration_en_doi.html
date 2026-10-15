@@ -235,6 +235,16 @@
     }
     .duo-card .binary { display: block; margin-bottom: .4rem; color: #6e7f70; font-family: var(--serif); font-size: 2.3rem; line-height: 1.2; }
     .duo-card h3 { margin: 0 0 .6rem; font-size: 1rem; letter-spacing: -.02em; }
+    .duo-card h3 a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: var(--accent-dark);
+      text-decoration-thickness: 1px;
+      text-underline-offset: .18em;
+      transition: color .2s ease;
+    }
+    .duo-card h3 a:hover,
+    .duo-card h3 a:focus-visible { color: var(--accent-dark); }
     .duo-card p { margin: 0; color: var(--muted); font-size: .92rem; }
     .symbol-triad {
       display: grid;
@@ -375,12 +385,12 @@
         <div class="duo">
           <article class="duo-card">
             <span class="binary">01</span>
-            <h3>NoOneWeOne · Integration</h3>
+            <h3><a href="https://nooneweone.org/" target="_blank" rel="noopener noreferrer" title="Visit NoOneWeOne.org (opens in a new tab)">NoOneWeOne</a> · Integration</h3>
             <p>This represents a movement in which individual elements enter into relationships and form an integrated whole. Distinct elements create a new structure through their relationships.</p>
           </article>
           <article class="duo-card">
             <span class="binary">10</span>
-            <h3>WeOneNoOne · Observation</h3>
+            <h3><a href="https://weonenoone.org/" target="_blank" rel="noopener noreferrer" title="Visit WeOneNoOne.org (opens in a new tab)">WeOneNoOne</a> · Observation</h3>
             <p>This represents a vantage point from which the integrated whole can be observed as a distinct object. It points to the need for a perspective that belongs to the whole while still being able to question and examine it.</p>
           </article>
         </div>

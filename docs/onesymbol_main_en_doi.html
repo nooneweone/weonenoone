@@ -88,6 +88,10 @@
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition-duration:.01ms !important; } }
     @media print { body { background:#fff; color:#111; } .hero { background:#fff; color:#111; padding:2rem 0; border-bottom:2px solid #111; } .hero::before,.hero::after,.toc,footer { display:none; } .hero-subtitle,.hero-meta { color:#333; } .hero-meta { border-color:#aaa; } .layout { display:block; max-width:100%; padding:1.3rem 0; } .collection-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .collection-card,.sound-card,.flow-card,.symbol-card,.triad-item,.final-quote { break-inside:avoid; } .triad-item,.final-quote { background:#eee; color:#111; } .triad-item p { color:#333; } .final-quote { border-left:3px solid #111; } a { text-decoration:none; } }
   .companion-link { display:inline-block; padding:.65rem 1rem; border:1px solid var(--accent-dark); color:var(--accent-dark); font-weight:750; text-decoration:none; background:var(--surface); } .companion-link:hover { background:#edf0e8; }
+    .no-link {
+      text-decoration: none; 
+      color: inherit;
+    }     
   </style>
 </head>
 <body>
